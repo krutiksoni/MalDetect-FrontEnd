@@ -4,6 +4,8 @@
   src: url(../src/font/ProductSans-Regular.ttf);
 }
 
+
+/* Global Styles */
 *{
   margin: 0;
   padding: 0;
@@ -12,12 +14,15 @@
 :root{
   --primary-color: #0b4dda;
   --secondary-color: #ffffff;
+  --footer-text-color: #4d5056;
   --bs-body-color: #20242c;
+  --body-text-black-color: #000000;
   --primary-font-family: 'Google Sans','Open Sans', sans-serif;
   --default-font-weight: 400;
   --bold-font-weight: 600;
 }
 
+/* Header Styles */
 .header{
   display: flex;
   justify-content: space-between;
@@ -44,6 +49,11 @@
   font-weight: var(--default-font-weight);
 }
 
+.header  .leftSide  ul  li :hover, 
+.header  .rightSide  ul  li :hover{
+  color: var(--primary-color);
+}
+
 .leftSide{
   margin: 0.8rem auto 1rem 1.3rem;
 }
@@ -52,12 +62,23 @@
   margin: 0.8rem 1.3rem 1rem auto;
 }
 
-.leftSide > ul > li > a > img{
+.leftSide > ul > li > a > svg, 
+.rightSide > ul > li > a > svg{
   vertical-align: middle;
 }
 
-.rightSide > ul > li > a > img{
-  vertical-align: middle;
+.leftSide svg {
+  fill: var(--primary-color); 
+  transition: fill 0.3s ease; 
+}
+
+.rightSide svg {
+  fill: var(--bs-body-color); 
+  transition: fill 0.3s ease; 
+}
+
+.rightSide > ul > li > a > svg:hover {
+  fill: var(--primary-color); 
 }
 
 .rounded-pill{
@@ -67,5 +88,63 @@
   padding: 3px 10px;
   font-weight: var(--bold-font-weight) !important;
 }
+
+
+/* Footer Styles */
+.footer{
+  margin-top: 100px ;
+  padding-top: 20px;
+  border-top: 1px solid #e5e9f0 !important;
+}
+
+.footer-content{
+  display: flex;
+  flex: 1 1 0px;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0px auto;
+  padding: 0px 135px 32px;
+}
+
+.footer-item{
+  flex-basis: 124px;
+  white-space: nowrap;
+}
+
+.footer-item > h2 {
+  white-space: nowrap;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.footer-item > ul > li {
+  line-height: 1.4;
+  list-style: none;
+}
+
+.footer-item-heading{
+  color: var(--bs-body-color) !important;
+  letter-spacing: 1px;
+}
+
+.footer-item-heading, .footer-item-normal-text{
+  color: var(--footer-text-color);
+  font-family: var(--primary-font-family);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-item-heading:hover,
+.footer-item-normal-text:hover {
+  color: var(--primary-color) !important;
+}
+
+
+.text-highlighted{
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
 
 

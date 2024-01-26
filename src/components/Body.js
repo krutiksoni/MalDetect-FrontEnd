@@ -1,6 +1,6 @@
 function Body() {
     return (
-        <h1>Body</h1>
+        <h2>Work Under Progress</h2>
     );
 };
 
