@@ -1,9 +1,11 @@
+import {SITE_NAME, DEVELOPER_NAME, CURRENT_YEAR} from "../config";
+
 function Footer() {
     return (
         <div className="footer">
             <div className="footer-content">
                 <section className="footer-item">
-                    <h2><a href="/" className="footer-item-heading">VirusTotal</a></h2>
+                    <h2><a href="/" className="footer-item-heading">{SITE_NAME}</a></h2>
                     <ul>
                         <li><a href="/" className="text-highlighted footer-item-normal-text">Contact Us</a></li>
                         <li><a href="/" className="footer-item-normal-text">Get Support</a></li>
@@ -51,6 +53,9 @@ function Footer() {
                         <li><a href="/" className="text-highlighted footer-item-normal-text">Use Cases</a></li>
                     </ul>
                 </section>
+            </div>
+            <div className="developer-line">
+                <p>&copy; {CURRENT_YEAR}  <a href="/">{SITE_NAME}</a> by <a href="https://github.com/krutiksoni">{DEVELOPER_NAME}</a>. All rights reserved</p>
             </div>
         </div>
     );
