@@ -17,6 +17,8 @@
   --body-text-color: #4d5056;
   --secondary-body-text-color: #20242c;
   --body-text-black-color: #000000;
+  --light-sky-blue-color: #c5d5f7;
+  --dark-blue-color: #304d8b;
   --bs-secondary-bg-rgb: 168, 168, 168;
   --bs-bg-opacity: 0.1;
   --primary-font-family: 'Google Sans','Open Sans', sans-serif;
@@ -121,11 +123,9 @@
   justify-content: center;
   margin: auto !important;
   width: 75%;
+  color: var(--primary-color);
 }
 
-.text-primary > img{
-  width: 400px;
-}
 
 .about{
   margin: auto !important;
@@ -189,6 +189,75 @@
 .section-wrapper{
   padding: 3rem !important;
 }
+
+/* File Styles */
+
+.vstack{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.gap-4{
+  gap: 1.5rem !important;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.btn{
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem 2.5rem !important;
+  font-family: var(--primary-font-family);
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+/* File Detail and Confirmation Styles */
+
+.file-details{
+  color: var(--dark-blue-color);
+  background-color: var(--light-sky-blue-color);
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.selected-file , .close-icon{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.close-icon{
+  cursor: pointer;
+}
+
+/* End of File Detail and Confirmation Styles */
+
+
+.terms{
+  text-align: center;
+  color: var(--body-text-black-color);
+  font-size: 12px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/*End of File Styles */
 
 .tip{
   display: flex;
