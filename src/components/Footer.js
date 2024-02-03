@@ -1,6 +1,6 @@
 import {SITE_NAME, DEVELOPER_NAME, CURRENT_YEAR} from "../config";
 
-function Footer() {
+const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-content">

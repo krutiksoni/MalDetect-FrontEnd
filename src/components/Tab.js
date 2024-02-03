@@ -3,7 +3,7 @@ import File from './File';
 import URL from './URL';
 import Search from './Search';
 
-function Tab() {
+const Tab = () => {
 
     const [activeTab, setActiveTab] = useState('FILE');
 
