@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import {SITE_NAME} from "../config";
 import changeTheme from './changeTheme';
 import {ReactComponent as Logo} from "../icons/logo.svg";
@@ -32,21 +33,37 @@ const Header = () => {
         <div className={`header ${darkTheme ? 'dark-theme' : ''}`}>
             <div className="leftSide">
                 <ul>
-                    <li><a href="/"><Logo /></a></li>
-                    <li><a href="/" className="websiteName">{SITE_NAME}</a></li>
-                    <li><a href="/">Intelligence</a></li>
-                    <li><a href="/">Hunting</a></li>
-                    <li><a href="/">Graph</a></li>
-                    <li><a href="/">API</a></li>
+                    <li>
+                        <Link to="/">
+                            <Logo />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/" className="websiteName">
+                            {SITE_NAME}
+                        </Link>
+                    </li>
+                    <li><Link to="/">Intelligence</Link></li>
+                    <li><Link to="/">Hunting</Link></li>
+                    <li><Link to="/">Graph</Link></li>
+                    <li><Link to="/">API</Link></li>
                 </ul>
             </div>
             <div className="rightSide">
                 <ul>
-                    <li><a href="/"><AppIcon /></a></li>
-                    <li><a href="/"><Notification /></a></li>
-                    <li><a href="/" onClick={handleThemeChange}>{darkTheme ? <LightThemeIcon /> : <DarkThemeIcon />}</a></li>
-                    <li><a href="/">Sign in</a></li>
-                    <li><a href="/" className='rounded-pill'>Sign Up</a></li>
+                    <li><Link to="/"><AppIcon /></Link></li>
+                    <li><Link to="/"><Notification /></Link></li>
+                    <li><Link to="/" onClick={handleThemeChange}>{darkTheme ? <LightThemeIcon /> : <DarkThemeIcon />}</Link></li>
+                    <li>
+                        <Link to="/login">
+                            Sign in
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/signup" className='rounded-pill'>
+                            Sign Up
+                        </Link>
+                    </li>
                 </ul> 
             </div>
         </div>
