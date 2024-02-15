@@ -4,4 +4,4 @@ Online Malware Detection Tool
 
 ## Created By
 
-Krutik Soni
+Krutik Soni and Mahin Patel
